@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:57667784766:android:41c1a188397e54a63f016f",
         "android_client_info": {
-          "package_name": "com.example.assistance_jasu"
+          "package_name": "com.example.attendance_app"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "57667784766-ov1fkphdo4hs8u58ngavp5qoalgo3upm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.assistance_jasu",
+            "package_name": "com.example.attendance_app",
             "certificate_hash": "c482824bef96911fac7538c5438e100ff2305f1c"
           }
         },

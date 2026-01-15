@@ -1,5 +1,5 @@
-name: assistance_jasu
-description: "A new Flutter project."
+name: attendance_app
+description: "Aplicación móvil para registro de asistencia empresarial con validación de ubicación GPS."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

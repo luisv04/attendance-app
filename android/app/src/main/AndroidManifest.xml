@@ -4,7 +4,7 @@
     <!-- Ubicación aproximada (solo para compatibilidad con versiones anteriores a Android 12) -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="30" />
     <application
-        android:label="assistance_jasu"
+        android:label="Attendance App"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,4 +1,4 @@
-# Assistant Jasu
+# Attendance App
 
 Aplicación móvil Flutter para registro de asistencia empresarial con validación de ubicación GPS. Permite a los empleados registrar su asistencia mediante autenticación con Google, validando que la ubicación sea real y precisa antes de enviar los datos a un webhook externo.
 
@@ -36,7 +36,7 @@ Aplicación móvil Flutter para registro de asistencia empresarial con validaci�
 1. En Firebase Console, ve a **Agregar app** → **Android**
 2. Registra la app con el `applicationId`:
    ```
-   com.example.assistance_jasu
+   com.example.attendance_app
    ```
    **Importante**: Este ID debe coincidir exactamente con el definido en `android/app/build.gradle.kts` (línea 25) y `AndroidManifest.xml`
 3. Descarga el archivo `google-services.json`
@@ -119,7 +119,7 @@ flutter pub run flutter_launcher_icons
 2. Modifica el atributo `android:label` en la etiqueta `<application>`:
    ```xml
    <application
-       android:label="Assistant Jasu"
+       android:label="Attendance App"
        ...>
    ```
    Este es el nombre que aparecerá debajo del icono en el launcher
@@ -129,7 +129,7 @@ flutter pub run flutter_launcher_icons
 2. Modifica el valor de `CFBundleDisplayName`:
    ```xml
    <key>CFBundleDisplayName</key>
-   <string>Assistant Jasu</string>
+   <string>Attendance App</string>
    ```
    Este es el nombre que aparecerá debajo del icono en el home screen
 
@@ -177,7 +177,7 @@ Asegúrate de que `.gitignore` incluya estos archivos o usa variables de entorno
 ### Ubicación en null o error de permisos
 - La app requiere permisos de ubicación **precisos** (no aproximados)
 - En Android 12+, el usuario debe seleccionar "Precisa" cuando se solicite el permiso
-- Si los permisos son denegados permanentemente, el usuario debe ir a Configuración → Apps → Assistant Jasu → Permisos
+- Si los permisos son denegados permanentemente, el usuario debe ir a Configuración → Apps → Attendance App → Permisos
 
 ### Emulador vs Dispositivo Físico
 - **Emulador Android**: Puede simular ubicación, pero la validación de GPS real puede fallar
