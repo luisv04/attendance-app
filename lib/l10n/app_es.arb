@@ -1,0 +1,73 @@
+{
+  "@@locale": "es",
+  "appTitle": "App de Asistencia",
+  "attendanceJasu": "Attendance Jasu",
+  "google": "Google",
+  "sendAssistant": "Enviar Asistencia",
+  "commentsOptional": "Comentarios (opcional)",
+  "writeComment": "Escribe un comentario...",
+  "attendanceRegisteredSuccessfully": "Asistencia registrada exitosamente",
+  "errorSendingAttendance": "Error al enviar la asistencia",
+  "noAuthenticatedUser": "No hay usuario autenticado",
+  "signInCanceled": "Inicio de sesión cancelado",
+  "onlyJasuDomainAllowed": "Solo se permiten correos con dominio @jasu.us. Por favor inicia sesión con una cuenta corporativa.",
+  "signInError": "Error al iniciar sesión: {error}",
+  "@signInError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "signOutError": "Error al cerrar sesión: {error}",
+  "@signOutError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "privacyNoticeTitle": "Aviso de Privacidad",
+  "privacyNoticeText": "Esta aplicación registra la ubicación únicamente al momento de enviar una checada de asistencia (entrada, salida a comida, regreso de comida, salida del trabajo).\nNo realiza seguimiento continuo ni fuera del horario laboral.\nLa información se utiliza exclusivamente para control de asistencia.",
+  "accept": "Aceptar",
+  "checkIn": "Entrada",
+  "lunchOut": "Salida a Comida",
+  "lunchReturn": "Regreso de Comida",
+  "checkOut": "Salida del Trabajo",
+  "selectCheckType": "Seleccionar tipo de checada",
+  "duplicateCheckTypeError": "No puedes enviar el mismo tipo de checada consecutivamente. Por favor selecciona un tipo diferente.",
+  "history": "Historial",
+  "noHistoryRecords": "No se encontraron registros de asistencia",
+  "last7Days": "Últimos 7 días",
+  "date": "Fecha",
+  "time": "Hora",
+  "type": "Tipo",
+  "location": "Ubicación",
+  "admin": "Administración",
+  "locations": "Ubicaciones",
+  "manageLocations": "Gestionar Ubicaciones",
+  "addLocation": "Agregar Ubicación",
+  "editLocation": "Editar Ubicación",
+  "locationName": "Nombre de Ubicación",
+  "latitude": "Latitud",
+  "longitude": "Longitud",
+  "radiusMeters": "Radio (metros)",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "delete": "Eliminar",
+  "edit": "Editar",
+  "nameRequired": "El nombre es requerido",
+  "invalidLatitude": "La latitud debe estar entre -90 y 90",
+  "invalidLongitude": "La longitud debe estar entre -180 y 180",
+  "invalidRadius": "El radio debe ser mayor a 0",
+  "deleteLocationConfirm": "¿Estás seguro de que deseas eliminar esta ubicación?",
+  "yes": "Sí",
+  "no": "No",
+  "logout": "Cerrar Sesión",
+  "suggestedTypeInfo": "Tipo sugerido según tu última checada",
+  "attendanceVerification": "Verificación de Asistencia",
+  "validAttendance": "Válida",
+  "outsideZone": "Fuera de zona",
+  "ok": "Aceptar",
+  "attendanceStatus": "Estado"
+}

@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:attendance_app/l10n/app_localizations.dart';
 import 'services/auth_service.dart';
+import 'services/storage_service.dart';
+import 'core/geofence_config.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
+import 'screens/privacy_notice_screen.dart';
 import 'core/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await StorageService.init();
+  await GeofenceConfig.initialize();
   runApp(const MyApp());
 }
 
@@ -19,6 +26,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Attendance App',
       theme: JasuTheme.theme,
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en'), // English (default)
+        Locale('es'), // Spanish
+      ],
+      routes: {
+        '/home': (context) => const HomeScreen(),
+      },
       home: const AuthWrapper(),
     );
   }
@@ -75,7 +95,16 @@ class _AuthWrapperState extends State<AuthWrapper> {
             return const LoginScreen();
           }
 
-          // Dominio válido: mostrar HomeScreen
+          // Dominio válido: verificar aceptación de privacidad por usuario
+          if (email != null) {
+            final privacyAccepted = StorageService.isPrivacyAccepted(email);
+            if (!privacyAccepted) {
+              // No ha aceptado privacidad: mostrar pantalla bloqueante
+              return PrivacyNoticeScreen(userEmail: email);
+            }
+          }
+
+          // Privacidad aceptada: mostrar HomeScreen
           return const HomeScreen();
         }
 

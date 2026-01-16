@@ -81,9 +81,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   
                   const SizedBox(height: 24),
                   
-                  // Texto "Assistant Jasu"
+                  // Texto "Attendance Jasu"
                   const Text(
-                    'Assistant Jasu',
+                    'Attendance Jasu',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w500,

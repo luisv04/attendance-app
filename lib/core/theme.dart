@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class JasuTheme {
   // Colores principales
-  static const Color darkGreen = Color(0xFF2D5016); // Verde oscuro principal
-  static const Color lightGreen = Color(0xFF4A7C2A); // Verde claro para bordes
+  static const Color darkGreen = Color(0xFF1F5D39); // Verde oscuro principal
+  static const Color lightGreen = Color(0xFF71AA50); // Verde claro para bordes
   static const Color backgroundColor = Colors.white;
   static const Color textDark = Color(0xFF1A1A1A); // Gris oscuro para texto
   static const Color textLight = Color(0xFF666666); // Gris claro para labels

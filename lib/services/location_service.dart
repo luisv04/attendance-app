@@ -40,7 +40,8 @@ class LocationService {
       }
 
       // 2. Solicitar permiso de ubicación precisa usando permission_handler
-      // Esto fuerza siempre la ubicación precisa en Android 12+
+      // En Android 12+, el sistema puede mostrar un diálogo para elegir entre precisa/aproximada
+      // Verificaremos después si se seleccionó aproximada y rechazaremos
       PermissionStatus status = await Permission.location.status;
       
       if (status.isDenied) {
@@ -98,7 +99,7 @@ class LocationService {
         );
       }
 
-      // 3. Obtener ubicación con máxima precisión (GPS real obligatorio)
+      // 4. Obtener ubicación con máxima precisión (GPS real obligatorio)
       // LocationAccuracy.bestForNavigation fuerza uso de GPS hardware, no red
       Position position = await Geolocator.getCurrentPosition(
         locationSettings: const LocationSettings(
@@ -106,9 +107,9 @@ class LocationService {
         ),
       );
 
-      // 4. Validaciones obligatorias de GPS real
+      // 5. Validaciones obligatorias de GPS real
       
-      // 4.1. Validar que NO sea ubicación mockeada/falsa
+      // 5.1. Validar que NO sea ubicación mockeada/falsa
       if (position.isMocked) {
         return LocationResult(
           success: false,
@@ -116,7 +117,17 @@ class LocationService {
         );
       }
 
-      // 4.2. Validar precisión máxima (25 metros)
+      // 5.2. Validar que NO sea ubicación aproximada (Android 12+)
+      // La ubicación aproximada típicamente tiene precisión > 100 metros
+      // Si la precisión es muy baja, es probable que el usuario seleccionó "Aproximada"
+      if (position.accuracy > 100) {
+        return LocationResult(
+          success: false,
+          errorMessage: 'Se requiere ubicación PRECISA. Por favor ve a Configuración → Apps → Attendance App → Permisos → Ubicación y selecciona "Precisa"',
+        );
+      }
+
+      // 5.3. Validar precisión máxima (25 metros) para GPS de calidad
       if (position.accuracy > 25) {
         return LocationResult(
           success: false,

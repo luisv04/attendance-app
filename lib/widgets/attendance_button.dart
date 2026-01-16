@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:attendance_app/l10n/app_localizations.dart';
 import '../core/theme.dart';
 
 class AttendanceButton extends StatelessWidget {
@@ -15,6 +16,7 @@ class AttendanceButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
@@ -37,9 +39,9 @@ class AttendanceButton extends StatelessWidget {
                   valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
               )
-            : const Text(
-                'Send Assistant',
-                style: TextStyle(
+            : Text(
+                l10n.sendAssistant,
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),

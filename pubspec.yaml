@@ -54,6 +54,18 @@ dependencies:
   package_info_plus: ^8.0.0
   crypto: ^3.0.5
 
+  # Localization
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+
+  # Storage
+  shared_preferences: ^2.2.0
+
+  # Maps (OpenStreetMap - gratuito)
+  flutter_map: ^7.0.0
+  latlong2: ^0.9.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -70,6 +82,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  generate: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
