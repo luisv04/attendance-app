@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "57667784766",
-    "project_id": "jasu-assistance",
-    "storage_bucket": "jasu-assistance.firebasestorage.app"
+    "project_number": "26901500023",
+    "project_id": "attendance-jasu",
+    "storage_bucket": "attendance-jasu.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:57667784766:android:41c1a188397e54a63f016f",
+        "mobilesdk_app_id": "1:26901500023:android:3365e838460e98fc297672",
         "android_client_info": {
           "package_name": "com.example.attendance_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "57667784766-ov1fkphdo4hs8u58ngavp5qoalgo3upm.apps.googleusercontent.com",
+          "client_id": "26901500023-skbm4rl109dcj8k2uf7hrcmlifgdd4ka.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.attendance_app",
@@ -22,20 +22,20 @@
           }
         },
         {
-          "client_id": "57667784766-iusr91lugpsccob3uu08hvake3acl2ui.apps.googleusercontent.com",
+          "client_id": "26901500023-dpnt15hreuehss7nq0evjekqfk91j1ml.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBT6r0PKjV-FonDPVN4amBDMSzNH10mJNM"
+          "current_key": "AIzaSyDXWMjUBJNJNeMZzgni_nHcddlwtPIAiM4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "57667784766-iusr91lugpsccob3uu08hvake3acl2ui.apps.googleusercontent.com",
+              "client_id": "26901500023-dpnt15hreuehss7nq0evjekqfk91j1ml.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
